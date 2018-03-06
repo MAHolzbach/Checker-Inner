@@ -1,11 +1,12 @@
 import React from "react";
 import DayCard from "./DayCard";
 
-function Month() {
-  const dayCount = 30;
-  const dayArray = [];
+//FIXME: "month" is being console logged as undefined. I'm not passing state properly.
 
-  for (let i = 1; i <= dayCount; i++) {
+function Month(month) {
+  const dayArray = [];
+  console.log(month);
+  for (let i = 0; i <= month; i++) {
     dayArray.push(i);
   }
 
