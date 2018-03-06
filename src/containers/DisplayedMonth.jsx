@@ -1,10 +1,20 @@
-import React, { Component } from "react";
 import { connect } from "react-redux";
+import { selectMonth } from "../actions/actions.js";
+import Month from "../components/Month";
 
-class DisplayedMonth extends Component {
-  render() {
-    return <div />;
+const getMonth = month => {
+  switch (month) {
+    case 2:
+      return 31;
   }
-}
+};
+
+const mapStateToProps = state => {
+  return {
+    month: getMonth(state.payload)
+  };
+};
+
+const DisplayedMonth = connect(mapStateToProps, null)(Month);
 
 export default DisplayedMonth;
