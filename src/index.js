@@ -2,12 +2,12 @@ import React from "react";
 import ReactDOM from "react-dom";
 import { createStore } from "redux";
 import { Provider } from "react-redux";
-import selectedMonth from "./reducers/reducers.js";
+import renderedMonth from "./reducers/reducers.js";
 import "./index.css";
 import App from "./components/App";
 import registerServiceWorker from "./registerServiceWorker";
 
-let store = createStore(selectedMonth);
+let store = createStore(renderedMonth);
 
 ReactDOM.render(
   <Provider store={store}>

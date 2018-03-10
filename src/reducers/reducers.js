@@ -1,7 +1,7 @@
 import { combineReducers } from "redux";
 import { SELECT_MONTH } from "../actions/actions.js";
 
-export default function SelectedMonth(state = 2, action) {
+function SelectedMonth(state = 2, action) {
   switch (action.type) {
     case SELECT_MONTH:
       return action.payload.days;
@@ -10,3 +10,7 @@ export default function SelectedMonth(state = 2, action) {
       return state;
   }
 }
+
+const renderedMonth = combineReducers(SelectedMonth);
+
+export default renderedMonth;
