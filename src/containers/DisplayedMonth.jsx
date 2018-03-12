@@ -11,7 +11,7 @@ const getMonth = month => {
 
 const mapStateToProps = state => {
   return {
-    month: getMonth(state.payload)
+    month: getMonth(state)
   };
 };
 
