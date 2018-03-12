@@ -7,6 +7,8 @@ import "./index.css";
 import App from "./components/App";
 import registerServiceWorker from "./registerServiceWorker";
 
+//TODO: Need to render an initial month, based on current month, on page load.
+
 let store = createStore(renderedMonth);
 
 ReactDOM.render(

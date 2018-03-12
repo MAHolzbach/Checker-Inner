@@ -8,6 +8,7 @@ function SelectedMonth(state = 0, action) {
     case SELECT_MONTH:
       console.log(action.type);
       console.log(action.days);
+      console.log(state);
       switch (action.days) {
         case 0:
           return 31;
